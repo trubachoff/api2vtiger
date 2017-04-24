@@ -1,0 +1,236 @@
+# Programming languages
+4D: [4D, 4th Dimension]
+ABAP: ABAP
+ABC: ABC
+ActionScript: [ActionScript, Action Script, AS1, AS2, AS3]
+Ada: Ada
+Algol: Algol
+Alice: Alice
+Angelscript: Angelscript
+Apex: Apex
+APL: APL
+Applescript: Applescript
+Arc: Arc
+AspectJ: AspectJ
+Assembly language: [Assembly, Assembly language]
+ATLAS: ATLAS
+AutoIt: AutoIt
+AutoLISP: AutoLISP
+Automator: Automator
+Avenue: Avenue
+Awk: [Awk, Mawk, Gawk, Nawk]
+Bash: Bash
+Basic: Basic
+BBC BASIC: BBC BASIC
+bc: bc
+BCPL: BCPL
+BlitzMax: [BlitzMax, BlitzBasic, Blitz Basic]
+Boo: Boo
+Bourne shell: [Bourne shell, sh]
+C shell: [Csh, C shell]
+C#: [C#, C-Sharp, C Sharp, CSharp, CSharp.NET, C#.NET]
+C++: [C++, CPP]
+C-Omega: C-Omega
+C: C
+Caml: Caml
+Ceylon: Ceylon
+CFML: [CFML, ColdFusion]
+cg: cg
+Ch: Ch
+CHILL: CHILL
+CIL: CIL
+Clarion: Clarion
+Clipper: Clipper
+Clojure: [Clojure, ClojureScript]
+CLU: CLU
+COBOL: COBOL
+Cobra: Cobra
+CoffeeScript: CoffeeScript
+COMAL: COMAL
+Common Lisp: Common Lisp
+Crystal: Crystal
+cT: cT
+Curl: Curl
+D: [D, dlang]
+Dart: Dart
+DCL: DCL
+Delphi/Object Pascal: [Delphi, Delphi.NET, DwScript, Object Pascal, Pascal]
+DiBOL: [DBL, Synergy/DE, DIBOL]
+Dylan: Dylan
+E: E
+ECMAScript: ECMAScript
+EGL: EGL
+Eiffel: Eiffel
+Elixir: Elixir
+Elm: Elm
+Emacs Lisp: [Emacs Lisp, Elips]
+Erlang: Erlang
+Etoys: Etoys
+Euphoria: Euphoria
+EXEC: EXEC
+F#: [F#, F-Sharp, FSharp, F Sharp]
+Factor: Factor
+Falcon: Falcon
+Fantom: Fantom
+Felix: Felix
+Forth: Forth
+Fortran: Fortran
+Fortress: Fortress
+FoxPro: [FoxPro, Fox Pro, Visual FoxPro, VFP]
+Gambas: Gambas
+GNU Octave: GNU Octave
+Go: [Go, Golang]
+Gosu: Gosu
+Groovy: [Groovy, GPATH, GSQL, Groovy++]
+Hack: Hack
+Haskell: Haskell
+Haxe: Haxe
+Heron: Heron
+HPL: HPL
+HyperTalk: HyperTalk
+Icon: Icon
+IDL: IDL
+Inform: Inform
+Informix-4GL: Informix-4GL
+INTERCAL: INTERCAL
+Io: Io
+Ioke: Ioke
+J#: J#
+J: J
+JADE: JADE
+Java: Java
+JavaFX Script: JavaFX Script
+JavaScript: [JavaScript, JS, SSJS]
+JScript.NET: JScript.NET
+JScript: JScript
+Julia: [Julia, Julialang, julia-lang]
+Korn shell: [Korn shell, ksh]
+Kotlin: Kotlin
+LabVIEW: LabVIEW
+Ladder Logic: Ladder Logic
+Lasso: Lasso
+Limbo: Limbo
+Lingo: Lingo
+Lisp: Lisp
+LiveCode: [Revolution, LiveCode]
+Logo: Logo
+LotusScript: LotusScript
+LPC: LPC
+Lua: [Lua, LuaJIT]
+Lustre: Lustre
+M4: M4
+MAD: MAD
+Magic: Magic
+Magik: Magik
+Malbolge: Malbolge
+MANTIS: MANTIS
+Maple: Maple
+MATLAB: MATLAB
+Max/MSP: Max/MSP
+MAXScript: MAXScript
+MDX: MDX
+MEL: MEL
+Mercury: Mercury
+Miva: Miva
+ML: ML
+Modula: [Modula, Modula-2, Modula-3]
+Monkey: Monkey
+MOO: MOO
+Moto: Moto
+MQL4: [MQL4, MQL5]
+MUMPS: MUMPS
+NATURAL: NATURAL
+Nemerle: Nemerle
+Nim: [Nim, Nimrod]
+NQC: NQC
+NSIS: NSIS
+NXT-G: NXT-G
+Oberon: Oberon
+Object Rexx: Object Rexx
+Objective-C: [Objective-C, objc, obj-c]
+OCaml: [Objective Caml, OCaml]
+Occam: Occam
+OpenCL: OpenCL
+OpenEdge ABL: [Progress, Progress 4GL, ABL, Advanced Business Language, OpenEdge]
+OPL: OPL
+Oxygene: Oxygene
+Oz: Oz
+Paradox: Paradox
+Perl: Perl
+PHP: [PHP, PHP5, PHP 5, PHP 7]
+Pike: Pike
+PILOT: PILOT
+PL/I: [PL/1, PL/I]
+PL/SQL: PL/SQL
+Pliant: Pliant
+PostScript: [PostScript, PS]
+POV-Ray: POV-Ray
+PowerBasic: PowerBasic
+PowerScript: PowerScript
+PowerShell: PowerShell
+Processing: Processing
+Prolog: Prolog
+Pure Data: [Pure Data, PD]
+PureBasic: PureBasic
+Python: Python
+Q: Q
+R: R
+Racket: Racket
+REBOL: REBOL
+REXX: REXX
+Ring: Ring
+Ruby: Ruby
+Rust: Rust
+S-PLUS: S-PLUS
+S: [S]
+SAS: SAS
+Sather: Sather
+Scala: Scala
+Scheme: Scheme
+Scratch: Scratch
+sed: sed
+Seed7: Seed7
+SIGNAL: SIGNAL
+Simula: Simula
+Simulink: Simulink
+Slate: Slate
+Smalltalk: Smalltalk
+Smarty: Smarty
+SPARK: SPARK
+SPSS: SPSS
+SQR: SQR
+Squeak: Squeak
+Squirrel: Squirrel
+Standard ML: [Standard ML, SML]
+Stata: Stata
+Suneido: Suneido
+SuperCollider: SuperCollider
+Swift: Swift
+TACL: TACL
+Tcl: [Tcl/Tk, Tcl]
+tcsh: tcsh
+Tex: Tex
+thinBasic: thinBasic
+TOM: [TOM]
+Transact-SQL: [T-SQL, Transact-SQL, TSQL]
+TypeScript: TypeScript
+Vala/Genie: [Vala, Genie]
+VBScript: VBScript
+Verilog: Verilog
+VHDL: VHDL
+Visual Basic: [Visual Basic, VB, VBA, VB6, Visual Basic .NET, VB.NET, Visual Basic.NET]
+WebDNA: WebDNA
+Whitespace: Whitespace
+Wolfram: Wolfram
+X10: X10
+XBase++: XBase++
+xBase: xBase
+Xen: Xen
+Xojo: [REALbasic, Xojo]
+XPL: XPL
+XQuery: XQuery
+XSLT: XSLT
+Xtend: Xtend
+yacc: yacc
+Yorick: Yorick
+Z shell: [Z shell, zsh]

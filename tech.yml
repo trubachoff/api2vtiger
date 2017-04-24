@@ -1,0 +1,53 @@
+# JavaScript Frameworks
+Angular.js: [Angular.js, Angular, Angular JS, AngularJS]
+Angular 2: [Angular 2, Angular2]
+React: [React, React JS, ReactJS]
+Polymer: [Polymer, Polymer 1.0]
+Web Components: [Web Components, WebComponents]
+Ember.js: Ember.js
+Vue.js: Vue.js
+WebAssembly: [WebAssembly, Web Assembly, wasm]
+asm.js: asm.js
+Node.js: Node.js, Node js, Nodejs
+# Frontend
+Bootstrap: [Bootstrap, Bootstrap 2, Bootstrap2, Bootstrap 3, Bootstrap3, Bootstrap 4, Bootstrap4]
+SASS: SASS
+SCSS: SCSS
+Less: Less
+PostCSS: PostCSS
+Foundation: Foundation
+MDL: MDL
+# Backend
+Symfony: Symfony
+Zend: Zend
+Laravel: [Laravel, Laravel 2, Laravel2, Laravel 3, Laravel3]
+Lumen: Lumen
+Slim: Slim
+Django: Django
+Flask: Flask
+Rails: [Ruby on Rails, RoR, Rails]
+Sinatra: Sinatra
+Play: Play
+Spark: Spark
+Express: Express
+Hapi: Hapi
+Sails.js: Sails.js
+Revel: Revel
+AWS Lambda: AWS Lambda
+Jekyll: Jekyll
+Octopress: Octopress
+MaxCDN: MaxCDN
+CloudFlare: CloudFlare
+# CMS
+WordPress: WordPress
+Drupal: Drupal
+Bitrix: Bitrix
+# Databases
+Redis: Redis
+RethinkDB: RethinkDB
+MySQL: [MySQL, MariaDB]
+PostgreSQL: PostgreSQL
+# Mobile Apps
+Ionic: Ionic
+React Native: React Native
+Meteor: Meteor
