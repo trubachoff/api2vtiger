@@ -62,9 +62,11 @@ class Parser
     element['created_user_id'] = @vtiger_api.user_id
     element['assigned_user_id'] = @vtiger_api.user_id
     element['industry'] = params['source']
-    tech_n_tags = process_tags params['tags'] unless params['tags'].empty?
-    element['tags'] = tech_n_tags[:tags].join(' |##| ') unless tech_n_tags[:tags].empty?
-    element['tech'] = tech_n_tags[:tech].join(' |##| ') unless tech_n_tags[:tech].empty?
+    unless params['tags'].nil?
+      tech_n_tags = process_tags params['tags']
+      element['tags'] = tech_n_tags[:tags].join(' |##| ') unless tech_n_tags[:tags].nil?
+      element['tech'] = tech_n_tags[:tech].join(' |##| ') unless tech_n_tags[:tech].nil?
+    end
     @vtiger_api.create('Leads', element)
   end
 
@@ -82,6 +84,7 @@ class Parser
         dict[syn.downcase] = orig
       end
     end
+    dict
   end
 
 end

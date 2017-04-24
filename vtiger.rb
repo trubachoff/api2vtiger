@@ -140,7 +140,6 @@ module Vtiger
       req = Net::HTTP::Post.new(@URI.request_uri)
       req.content_type = 'application/x-www-form-urlencoded'
       req.body = URI.encode_www_form(params)
-
       begin
         res = JSON.parse(http.request(req).body)
       rescue Net::HTTPServerError
