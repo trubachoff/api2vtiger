@@ -1,15 +1,15 @@
 # Set the working application directory
-working_directory "/srv/parser2vtiger"
+working_directory '/srv/api4vtiger'
 
 # Unicorn PID file location
-pid "/var/run/parser2vtiger/unicorn.pid"
+pid '/var/run/api4vtiger/unicorn.pid'
 
 # Path to logs
-stderr_path "/var/log/parser2vtiger/unicorn.log"
-stdout_path "/var/log/parser2vtiger/unicorn.log"
+stderr_path '/var/log/api4vtiger/unicorn.log'
+stdout_path '/var/log/api4vtiger/unicorn.log'
 
 # Unicorn socket
-listen "/var/run/parser2vtiger/unicorn.sock"
+listen '/var/run/api4vtiger/unicorn.sock'
 
 # Number of processes
 worker_processes 4
