@@ -33,9 +33,10 @@ class Parser
     @dict = init_dict
   end
 
-  def get_lead(id)
-    webservice_id = "#{@vtiger_api.describe('Leads')['idPrefix']}x#{id}" # <object_type_id>x<object_id> => 12x10
-    @vtiger_api.retrieve(webservice_id)
+  def get_lead(uid)
+    lead_by_uid uid
+    # webservice_id = "#{@vtiger_api.describe('Leads')['idPrefix']}x#{id}" # <object_type_id>x<object_id> => 12x10
+    # @vtiger_api.retrieve(webservice_id)
   end
 
   def get_leads(count, offset)
@@ -194,13 +195,16 @@ class App < Sinatra::Base
     }.to_json
   end
 
-  # GET /lead/123 - view lead
-  get '/lead/:id' do
-    Parser.new.get_lead(id: params[:id]).to_json
+  # POST /get_lead/123 - view lead
+  post '/get_lead/:uid' do
+    {
+      status: 'OK',
+      results: Parser.new.get_lead(params[:uid])
+    }.to_json
   end
 
-  # GET /leads - view leads
-  get '/leads' do
+  # POST /leads - view leads
+  post '/get_leads' do
     # TODO: пока не надо
     {
       status: 'ERROR',
@@ -216,7 +220,7 @@ class App < Sinatra::Base
     when 'upwork.com'
       res = Upwork_parser.new.create_lead @data
     else
-      raise "Incorrect `source`."
+      raise 'Incorrect `source`.'
     end
 
     {
@@ -233,7 +237,7 @@ class App < Sinatra::Base
     when 'upwork.com'
       res = Upwork_parser.new.update_lead @data
     else
-      raise "Incorrect `source`."
+      raise 'Incorrect `source`.'
     end
 
     {
