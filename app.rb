@@ -72,10 +72,9 @@ class Parser
   end
 
   def update_lead(params, lead_params)
-    element = params.select { |k| lead_params.index(k.to_sym) }
-    element['assigned_user_id'] = @vtiger_api.user_id
+    element = lead_by_uid params['uid']
+    element.merge! params.select { |k| lead_params.index(k.to_sym) }
     element['industry'] = params['source']
-    element['id'] = get_lead_id params['uid']
     unless params['tags'].nil?
       tech_n_tags = process_tags params['tags']
       element['tags'] = tech_n_tags[:tags].join(' |##| ') unless tech_n_tags[:tags].nil?
@@ -86,8 +85,8 @@ class Parser
 
   private
 
-  def get_lead_id(uid)
-    @vtiger_api.query("SELECT * FROM Leads WHERE uid = '#{uid}' LIMIT 1;")[0]['id']
+  def lead_by_uid(uid)
+    @vtiger_api.query("SELECT * FROM Leads WHERE uid = '#{uid}' LIMIT 1;")[0]
   end
 
   def init_dict
