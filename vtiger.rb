@@ -114,7 +114,7 @@ module Vtiger
         query: query_string
       }
       params = {sessionName: @session_id}
-      res = post_request query
+      res = post_request query, params
       res['result']
     end
 

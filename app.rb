@@ -27,7 +27,8 @@ class Parser
       :country,
       :state,
       :uid,
-      :tags
+      :tags,
+      :id
     ]
     @dict = init_dict
   end
@@ -70,7 +71,24 @@ class Parser
     @vtiger_api.create('Leads', element)
   end
 
+  def update_lead(params, lead_params)
+    element = params.select { |k| lead_params.index(k.to_sym) }
+    element['assigned_user_id'] = @vtiger_api.user_id
+    element['industry'] = params['source']
+    element['id'] = get_lead_id params['uid']
+    unless params['tags'].nil?
+      tech_n_tags = process_tags params['tags']
+      element['tags'] = tech_n_tags[:tags].join(' |##| ') unless tech_n_tags[:tags].nil?
+      element['tech'] = tech_n_tags[:tech].join(' |##| ') unless tech_n_tags[:tech].nil?
+    end
+    @vtiger_api.update(element)
+  end
+
   private
+
+  def get_lead_id(uid)
+    @vtiger_api.query("SELECT * FROM Leads WHERE uid = '#{uid}' LIMIT 1;")[0]['id']
+  end
 
   def init_dict
     lang = YAML.load_file('lang.yml')
@@ -86,7 +104,6 @@ class Parser
     end
     dict
   end
-
 end
 
 class Upwork_parser < Parser
@@ -114,7 +131,9 @@ class Upwork_parser < Parser
     super data, @lead_params
   end
 
-
+  def update_lead(data)
+    super data, @lead_params
+  end
 end
 
 class Angel_parser < Parser
@@ -134,24 +153,26 @@ class Angel_parser < Parser
   def create_lead(data)
     super data, @lead_params
   end
+
+  def update_lead(data)
+    super data, @lead_params
+  end
 end
 
 class Dima_jr_paser < Parser
   def initialize(*args)
     super
   end
-
 end
 
 class App < Sinatra::Base
   helpers Sinatra::Param
 
+  set :show_exceptions, false
+
   configure :development do
     register Sinatra::Reloader
   end
-
-
-  set :show_exceptions, false
 
   helpers do
     def valid_key? (key)
@@ -174,12 +195,12 @@ class App < Sinatra::Base
     }.to_json
   end
 
-  # view lead
+  # GET /lead/123 - view lead
   get '/lead/:id' do
-    Parser.new.get_lead(params[:id]).to_json
+    Parser.new.get_lead(id: params[:id]).to_json
   end
 
-  # view leads
+  # GET /leads - view leads
   get '/leads' do
     # TODO: пока не надо
     {
@@ -188,29 +209,37 @@ class App < Sinatra::Base
     }.to_json
   end
 
-  # create new Lead
+  # POST /lead - create new Lead
   post '/lead' do
     case @data['source']
     when 'angel.co'
-      Angel_parser.new.create_lead @data
+      res = Angel_parser.new.create_lead @data
     when 'upwork.com'
-      Upwork_parser.new.create_lead @data
+      res = Upwork_parser.new.create_lead @data
     else
       raise "Incorrect `source`."
     end
 
     {
       status: 'OK',
-      results: 'test'
+      results: res
     }.to_json
   end
 
-  # update Lead
-  put 'lead/:id' do
-    # TODO: отложить, пока не помчиню создание lead
+  # PUT /lead - update Lead
+  put '/lead' do
+    case @data['source']
+    when 'angel.co'
+      res = Angel_parser.new.update_lead @data
+    when 'upwork.com'
+      res = Upwork_parser.new.update_lead @data
+    else
+      raise "Incorrect `source`."
+    end
+
     {
-      status: 'ERROR',
-      error_message: 'temporary not implemented'
+      status: 'OK',
+      results: res
     }.to_json
   end
 
